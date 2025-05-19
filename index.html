@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <header>
+        <input placeholder="写点什么，按 Enter 确认" type="text" />
+        <button class="search">查找</button>
+      </header>
+      <main>
+        <ul>
+          <li class="d-b-c">
+            <div class="main-li-left">
+              <label>
+                <input class="li-check" type="checkbox" />
+                <span class="li-content">vue</span>
+              </label>
+            </div>
+            <div class="main-li-right">
+              <button class="edit">编辑</button>
+              <button class="li-delete">删除</button>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <footer class="d-b-c">
+        <div class="footer-left">
+          <label>
+            <input class="footer-check" type="checkbox" />
+            <span>全选</span>
+            <span class="footer-done">已完成：0 / 共：0</span>
+          </label>
+        </div>
+        <div class="footer-right">
+          <button class="clear">清除已完成</button>
+        </div>
+      </footer>
+    </div>
+    <script src="./todolist.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    letter-spacing: .1rem;
+}
+
+.todo {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 40rem;
+    border: 1px solid #ddd;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+header{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+header input {
+    padding: .6rem;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+header button{
+    margin-left: .4rem;
+}
+header input:focus {
+    box-shadow: 0 0 0.1rem #ccc;
+}
+main ul {
+    margin-top: 1rem;
+}
+
+.d-b-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-c-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul li {
+    padding: .1rem;
+    border: 1px solid #eee;
+}
+
+.inputEdit {
+    border: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.editing {
+    display: none;
+}
+
+.normal {
+    display: block;
+}
+
+button {
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: yellowgreen;
+    color: #fff;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+label span {
+    margin-left: 1rem;
+}
+
+.empty{
+    font-size: 2rem;
+    color:#ccc;
+}
+
+@media screen and (max-width: 900px) {
+    .todo {
+        width: 100%;
+    }
+}
+.search-active{
+    margin: 0;
+    padding: 0;
+    background-color: yellowgreen;
+    color:#fff;
+}
