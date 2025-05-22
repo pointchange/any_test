@@ -1,0 +1,10 @@
+<mat-card-header>
+    <!-- <input matInput  (keyup)="keyupHandle($event)"> -->
+    <mat-form-field  class="example-full-width">
+        <mat-label>按下Enter确认</mat-label>
+        <input matInput placeholder="做点什么" [(ngModel)]="value" (keyup)="keyupHandle($event)" >
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value.set('')">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</mat-card-header>

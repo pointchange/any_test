@@ -1,0 +1,45 @@
+<!-- <li class="row" [class.active]="item().done" >
+    <div class="left">
+      <label *ngIf="!isEditing(); else inputTemplate" >
+        <input [checked]="item().done" type="checkbox" (change)="checkedHandle(item().id,$event)" >
+        <span> {{item().content}} </span>
+      </label>
+      <ng-template #inputTemplate>
+        <input #inputRef (keyup)="keyupHandle(item().id,$event)" [value]="item().content" type="text" (blur)="blurHanlde()">
+      </ng-template>
+    </div>
+    <div class="right">
+      <button (click)="editClick()">编辑</button>
+      <button (click)="todolist.deleteTodo(item().id)" >删除</button>
+    </div>
+  </li> -->
+
+<mat-list-item [disabled]="item().done">
+  <mat-checkbox
+    matListItemTitle
+    *ngIf="!isEditing(); else inputTemplate"
+    (change)="todolist.checkedTodo(item().id, $event.checked)"
+    [checked]="item().done"
+  >
+    {{ item().content }}
+  </mat-checkbox>
+  <ng-template #inputTemplate>
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        #inputRef
+        (keyup)="keyupHandle(item().id, $event)"
+        [value]="item().content"
+        (blur)="blurHanlde()"
+      />
+    </mat-form-field>
+  </ng-template>
+  <div matListItemMeta>
+    <button mat-icon-button (click)="editClick()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="todolist.deleteTodo(item().id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-list-item>

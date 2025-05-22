@@ -1,0 +1,17 @@
+<mat-card-footer>
+  <mat-card-actions class="row">
+    <mat-checkbox
+      (change)="todolist.checkedAll($event.checked)"
+      [checked]="total() !== 0 && done() === total()"
+      >已完成：{{ done() }} /共：{{ total() }}
+    </mat-checkbox>
+    <button
+      [disabled]="total() === 0 || done() === 0"
+      mat-raised-button
+      (click)="todolist.clear()"
+    >
+      <mat-icon>delete</mat-icon>
+      清除已完成
+    </button>
+  </mat-card-actions>
+</mat-card-footer>

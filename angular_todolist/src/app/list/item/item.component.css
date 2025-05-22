@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row:hover{
+    background-color: #eee;
+}
+.active{
+    background-color: yellowgreen;
+}
+.example-full-width{
+    width: 100%;
+}
