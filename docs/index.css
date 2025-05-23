@@ -113,3 +113,6 @@ label span {
     text-decoration: none; 
     color: #000;
 }
+.btn-a:hover{
+     color: #fff;
+}
