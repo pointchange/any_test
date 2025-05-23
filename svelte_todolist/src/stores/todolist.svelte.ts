@@ -1,24 +1,13 @@
 import { writable } from "svelte/store";
 
+const list = writable<list>([]);
+const KEY = 'list';
+const getListData = localStorage.getItem(KEY)
 
-const list = writable<list>([
-    {
-        id: "001",
-        content: "vue",
-        done: true,
-    },
-    {
-        id: "002",
-        content: "react",
-        done: true,
-    },
-    {
-        id: "003",
-        content: "angular",
-        done: false,
-    },
-]);
-
+if (getListData) {
+    const arr = JSON.parse(getListData)
+    list.update(list => [...arr, ...list])
+}
 
 const addList: add = (content) => {
     const id = crypto.randomUUID();
@@ -58,6 +47,7 @@ const editTodo: editTodo = (id, content) => {
 }
 
 export {
+    KEY,
     list,
     addList,
     deleteList,
